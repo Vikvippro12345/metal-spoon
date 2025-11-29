@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Link or Google Search</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        background: #f0f0f0;
+    }
+    form {
+        display: flex;
+        gap: 10px;
+    }
+    input[type="text"] {
+        padding: 10px;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<form id="searchForm">
+    <input type="text" id="query" placeholder="Type a URL or search term...">
+    <button type="submit">Go</button>
+</form>
+
+<script>
+document.getElementById("searchForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const query = document.getElementById("query").value.trim();
+
+    if (!query) return;
+
+    let url;
+    // Check if it looks like a URL (basic check)
+    if (query.startsWith("http://") || query.startsWith("https://") || query.includes("youtube.com")) {
+        url = query;
+    } else {
+        // Otherwise, search with Google
+        url = "https://www.google.com/search?q=" + encodeURIComponent(query);
+    }
+
+    window.open(url, "_blank");
+});
+</script>
+
+</body>
+</html>

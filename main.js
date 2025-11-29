@@ -1,1 +1,1 @@
-window.location.href="https://blobby-boi.github.io/BlobbypassXSS/main.html"
+window.location.href="https://raw.githubusercontent.com/Vikvippro12345/metal-spoon/refs/heads/main/index.html"

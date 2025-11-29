@@ -1,1 +1,1 @@
-window.location.href="https://raw.githubusercontent.com/Vikvippro12345/metal-spoon/refs/heads/main/index.html"
+window.location.href="https://vikvippro12345.github.io/metal-spoon/"
